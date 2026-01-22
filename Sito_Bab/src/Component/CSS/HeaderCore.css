@@ -1,0 +1,69 @@
+/* Dentro: src/Header.css */
+
+/* 1. Stile dell'involucro (l'avevamo già) */
+.page-header {
+    min-height: 100vh; /* Ora è 100% dello schermo (non 50) */
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+    display: flex;
+    align-items: center; /* Centra il contenuto verticalmente */
+    justify-content: center; /* Centra il contenuto orizzontalmente */
+  }
+  
+  /* 2. Il filtro scuro (l'avevamo già) */
+  .filter {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Filtro scuro al 50% */
+  }
+  
+  /* 3. Il contenitore (era <Container>) */
+  /* Questa classe centra il contenuto e gli dà una larghezza massima */
+  .container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    z-index: 2; /* Per stare SOPRA il filtro */
+  }
+  /* Limiti di larghezza per schermi diversi */
+  @media (min-width: 576px) { .container { max-width: 540px; } }
+  @media (min-width: 768px) { .container { max-width: 720px; } }
+  @media (min-width: 992px) { .container { max-width: 960px; } }
+  @media (min-width: 1200px) { .container { max-width: 1140px; } }
+  
+  /* 4. Lo stile del contenuto */
+  .motto {
+    color: #ffffff; /* Testo bianco */
+  }
+  .text-center {
+    text-align: center; /* Testo centrato */
+  }
+  
+  /* 5. Lo stile dei bottoni (rubato da paper-kit) */
+  .btn-neutral {
+    background-color: transparent;
+    border: 1px solid #ffffff;
+    color: #ffffff;
+  }
+  .btn-neutral:hover {
+    background-color: #ffffff;
+    color: #333333;
+  }
+  .btn-round {
+    border-radius: 30px; /* Li rende rotondi */
+    padding: 10px 18px;
+    margin: 0 5px; /* Spazio tra i bottoni (mr-1) */
+    text-decoration: none; /* Rimuove sottolineatura dai link */
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+  }
+  .fa { /* Per l'icona 'play' */
+    margin-right: 5px;
+  }

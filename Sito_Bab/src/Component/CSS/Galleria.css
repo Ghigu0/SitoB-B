@@ -1,0 +1,49 @@
+/* Dentro: src/components/Galleria.css */
+
+.gallery-thumbnail {
+  width: 90%;
+  max-width: 1200px; /* Su un desktop largo 1200px, 5x200px + gap ci sta */
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+
+.gallery-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 40px auto; /* Centra il blocco */
+  text-align: center; /* Centra il titolo h2 */
+}
+
+.gallery-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0px;
+  justify-content: center; /* <-- IL COLPEVOLE */
+}
+
+@media (max-width: 768px) {
+  .gallery-grid {
+    /* ...allora SOVRASCRIVI la regola di prima e
+      usa 5 colonne.
+    */
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+
+.gallery-thumbnail {
+ 
+  width: 100%;
+  aspect-ratio: 1 / 1; 
+  object-fit: cover;
+}
+
+.gallery-container{
+          width: '90%';
+          max-Width: '1200px';
+          margin: '40px auto';
+          text-Align: 'center'; 
+}

@@ -1,0 +1,159 @@
+/* Il tuo file: src/components/Navbar.css */
+
+/* Stile base della Navbar */
+.navbar {
+    padding: 0.5rem 1rem;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    transition: all 0.3s ease-in-out;
+  }
+  .navbar-expand-lg {
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+  }
+  
+  /* Posizionamento */
+  .fixed-top {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030; /* Sta sopra quasi tutto */
+  }
+  
+  /* Colore Trasparente (Stato Iniziale) */
+  .navbar-transparent {
+    background-color: transparent !important;
+    border-bottom: 1px solid transparent;
+    color: #ffffff; /* Testo bianco */
+  }
+  .navbar-transparent .navbar-brand,
+  .navbar-transparent .nav-link {
+    color: #ffffff !important;
+  }
+  
+  /* Colore Solido (Dopo lo Scroll) */
+  .navbar {
+    background-color: #ffffff; /* Sfondo bianco */
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    color: #333333; /* Testo scuro */
+  }
+  .navbar .navbar-brand,
+  .navbar .nav-link {
+    color: #333333 !important;
+  }
+  .navbar .nav-link:hover {
+    color: #e86e52 !important; /* Colore accento */
+  }
+  
+  
+  /* Stili del Brand (Logo/Titolo) */
+  .navbar-brand {
+    display: inline-block;
+    padding-top: 0.3125rem;
+    padding-bottom: 0.3125rem;
+    margin-right: 1rem;
+    font-size: 1.25rem;
+    line-height: inherit;
+    white-space: nowrap;
+    text-decoration: none;
+    font-weight: 600;
+  }
+  
+  /* Bottone "Hamburger" (per Mobile) */
+  .navbar-toggler {
+    padding: 0.25rem 0.75rem;
+    font-size: 1.25rem;
+    line-height: 1;
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
+    cursor: pointer;
+  }
+  .navbar-toggler-bar {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background-color: #ffffff; /* Colore barre (bianco) */
+    margin: 4px 0;
+    transition: all 0.2s;
+  }
+  .navbar .navbar-toggler-bar {
+    background-color: #333333; /* Colore barre (scuro) */
+  }
+  .navbar-transparent .navbar-toggler-bar {
+    background-color: #ffffff; /* Colore barre (bianco) */
+  }
+  
+  /* Animazione del bottone "Hamburger" (toggled) */
+  .navbar-toggler.toggled .bar1 {
+    transform: rotate(45deg) translate(4px, 5px);
+  }
+  .navbar-toggler.toggled .bar2 {
+    opacity: 0;
+  }
+  .navbar-toggler.toggled .bar3 {
+    transform: rotate(-45deg) translate(3px, -4px);
+  }
+  
+  
+  /* Stili del menu collassabile */
+  .collapse {
+    display: none; /* Nascosto di default */
+  }
+  .collapse.show {
+    display: block; /* Mostrato quando 'navbarCollapse' è true */
+  }
+  .navbar-collapse {
+    flex-basis: 100%;
+    flex-grow: 1;
+    align-items: center;
+  }
+  .justify-content-end {
+    justify-content: flex-end !important;
+  }
+  
+  /* Stili per la lista <ul> dei link */
+  .navbar-nav {
+    display: flex;
+    flex-direction: column; /* In mobile (stack verticale) */
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+  }
+  
+  /* Stili per i link <li> e <a> */
+  .nav-item {
+    /* vuoto, per ora */
+  }
+  .nav-link {
+    display: block;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  .nav-link i {
+    margin-right: 8px; /* Spazio per l'icona */
+  }
+  
+  
+  /* Desktop (quando lo schermo è > 992px) */
+  @media (min-width: 992px) {
+    .navbar-expand-lg {
+      flex-flow: row nowrap;
+      justify-content: flex-start;
+    }
+    .navbar-expand-lg .navbar-nav {
+      flex-direction: row; /* Link in orizzontale su desktop */
+    }
+    .navbar-expand-lg .navbar-collapse {
+      display: flex !important; /* Sempre visibile su desktop */
+      flex-basis: auto;
+    }
+    .navbar-expand-lg .navbar-toggler {
+      display: none; /* Nasconde il bottone "hamburger" su desktop */
+    }
+  }

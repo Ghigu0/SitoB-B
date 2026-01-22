@@ -1,0 +1,37 @@
+/* Dentro: src/components/ContentManager.css */
+
+/*
+  Questo è il "bersaglio": la classe che antd usa 
+  per il testo della descrizione.
+*/
+.ant-list-item-meta-description {
+  /* 1. LA SOLUZIONE: 
+    Forziamo il testo ad andare a capo.
+    Usiamo !important per "vincere" contro lo stile di default di antd.
+  */
+  white-space: normal !important;
+  
+  /* 2. (Opzionale) Una "sicurezza" per parole lunghissime:
+    Se l'utente incolla un link lunghissimo senza spazi, 
+    questo lo forzerà a "rompersi" per non strabordare.
+  */
+  word-wrap: break-word !important;
+}
+/* Dentro: src/components/ContentManager.css */
+
+/* Regola per il testo lungo (che avevamo già) */
+.ant-list-item-meta-description {
+  white-space: normal !important;
+  word-wrap: break-word !important;
+}
+
+/* ECCO LA NUOVA REGOLA PER L'IMMAGINE:
+  Dice all'immagine: "Comportati come il vecchio Avatar, 
+  sii un quadrato 150x150 e ritaglia (cover) l'immagine."
+*/
+.content-manager-image {
+  width: 150px !important; 
+  height: 150px !important;
+  object-fit: cover; /* La magia per non distorcere */
+  border-radius: 8px;  /* Stile (Avatar era 'square', noi facciamo 'rounded') */
+}

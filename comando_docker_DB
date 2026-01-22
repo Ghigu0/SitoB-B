@@ -1,0 +1,5 @@
+docker run --name mysql-bnb \
+-e MYSQL_ROOT_PASSWORD=segreto \
+-e MYSQL_DATABASE=bnb_db \
+-p 3306:3306 \
+-d mysql:8.0

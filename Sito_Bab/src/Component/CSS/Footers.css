@@ -1,0 +1,88 @@
+/* Il tuo file: src/components/Footer.css */
+
+/* Stile principale del footer */
+.footer {
+    padding: 24px 0;
+    background-color: #f8f8f8; /* Colore di default (footer-white) */
+    color: #555555;
+    border-top: 1px solid #e8e8e8;
+  }
+  
+  /* Stile per la versione scura (se vuoi usarla, aggiungi la classe 'footer-black') */
+  .footer.footer-black {
+    background-color: #2c2c2c;
+    color: #9c9c9c;
+    border-top: 1px solid #333333;
+  }
+  .footer.footer-black a {
+    color: #ffffff; /* Link bianchi su sfondo scuro */
+  }
+  
+  /* Layout (per <Row>) */
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+    align-items: center; /* Centra verticalmente il nav e i credits */
+  }
+  
+  /* Stili per la navigazione del footer */
+  .footer-nav {
+    display: inline-block;
+    margin-bottom: 0;
+  }
+  .footer-nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  .footer-nav li {
+    display: inline-block;
+  }
+  .footer-nav a {
+    color: #555555;
+    padding: 10px 15px;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  .footer-nav a:hover {
+    color: #e86e52; /* Colore di accento del template */
+  }
+  
+  /* Stili per i "credits" (copyright) */
+  .credits {
+    padding: 10px 15px;
+  }
+  .ml-auto {
+    margin-left: auto !important; /* Spinge i credits a destra */
+  }
+  .copyright {
+    font-size: 14px;
+  }
+  /* Stile per l'icona del cuore */
+  .heart {
+    color: #e86e52; /* Colore rosso del template */
+    animation: heartBeat 1.2s linear infinite;
+  }
+  
+  /* Animazione del cuore (bonus!) */
+  @keyframes heartBeat {
+    0% { transform: scale(1); }
+    25% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+  }
+  
+  /* Contenitore (lo avevamo già nel CSS dell'Header,
+     ma è bene averlo anche qui se il footer è usato da solo) */
+  .container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  @media (min-width: 576px) { .container { max-width: 540px; } }
+  @media (min-width: 768px) { .container { max-width: 720px; } }
+  @media (min-width: 992px) { .container { max-width: 960px; } }
+  @media (min-width: 1200px) { .container { max-width: 1140px; } }

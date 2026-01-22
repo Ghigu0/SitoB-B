@@ -1,0 +1,100 @@
+/* Dentro: Contatti.css */
+
+/* 1. Stile del contenitore principale */
+.informazioni {
+  /* ... (padding, background, display, flex-direction, align-items) ... */
+  padding: 20px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+/* 2. Stile del titolo (invariato) */
+.informazioni h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+/* 3. Stile di OGNI RIGA (invariato) */
+.info-riga {
+  display: flex;
+  align-items: right;
+  margin-bottom: 15px; 
+  width: 100%;
+  max-width: 1000px; /* O la larghezza che preferisci */
+  
+}
+
+/* 4. Stile delle ICONE (MODIFICATO) */
+.info-riga .anticon {
+  /*
+    Usiamo 'rem' (un'unità "assoluta") invece di 'em' (relativa).
+    Questo ci dà un controllo preciso e indipendente.
+    1.9rem è circa 1.9 volte il font di base.
+    Gioca con questo numero (es. 2.0rem, 2.2rem)
+  */
+  font-size: 2.9rem; 
+  color: #62161c;
+  margin-right: 15px;
+}
+
+/* 5. --- NUOVA REGOLA PER IL TESTO --- */
+/*
+  Applichiamo la dimensione GRANDE direttamente allo <span>!
+*/
+.info-riga span {
+  font-size: 1.8rem; /* <-- QUESTA È LA MANOPOLA PER IL TESTO */
+  font-weight: 500;
+  color: #333; 
+}
+
+.info-riga-contenuto {
+  display: flex;
+  align-items: right !important;
+
+  /* --- CORREZIONE PER LO SPAZIO --- */
+  /* Dice al testo di "crescere" e occupare 
+     tutto lo spazio disponibile, spingendo 
+     i bottoni a destra */
+  flex-grow: 10; 
+  min-width: 0;
+}
+
+.info-riga-contenuto span {
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: #333; 
+  
+  /* Assicura che vada a capo (già presente) */
+  display: block; 
+  white-space: normal;
+  word-wrap: break-word;
+
+  /* --- ECCO LA CORREZIONE --- */
+  /*
+    Forza il testo all'interno dello span
+    ad allinearsi a sinistra, ignorando
+    il 'text-align: center' del genitore.
+  */
+  text-align: left;
+}
+
+
+
+.info-riga .ant-btn .anticon {
+  /* Ora il font-size può tornare a 16px o quello che sembra giusto */
+  font-size: 25px; /* Potrebbe anche essere 15px o 14px, a seconda del font */
+  
+  /* Rimuovi qualsiasi margine che potrebbe spingere l'icona */
+  margin: 0 !important;
+  padding: 0 !important;
+  
+  /* Assicurati che sia un blocco inline per il centraggio */
+  display: inline-block !important;
+  vertical-align: middle !important; /* Fallo allineare al centro del testo */
+}
+/* --- FINE CORREZIONE BOTTONI --- */
+
+

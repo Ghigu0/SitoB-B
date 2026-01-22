@@ -1,0 +1,30 @@
+
+.page-header {
+    /* Impostazioni per l'immagine di sfondo */
+    background-size: cover;
+    background-position: center center;
+  
+    /* Impostazioni di layout */
+    position: relative; /* Fondamentale per posizionare il filtro */
+    display: flex;
+    align-items: center;
+  
+    /* Impostiamo un'altezza di default (es. tutto lo schermo) */
+    min-height: 100vh; 
+  }
+  
+  /* 2. Modifica per la versione "xs" (quella che usi tu) */
+  .page-header-xs {
+    min-height: 50vh; 
+  }
+  
+  /* 3. Il filtro scuro (l'altro div) */
+  .filter {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Questo crea l'effetto "scuro". 0.5 è la trasparenza. */
+    background: rgba(0, 0, 0, 0.3); 
+  }
